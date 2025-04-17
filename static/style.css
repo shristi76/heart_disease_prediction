@@ -1,0 +1,155 @@
+/* Reset some default styles */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+    background: linear-gradient(to right, #00aa8b, #ACB6E5);
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 40px;
+}
+
+/* Main content wrapper */
+.container {
+    width: 100%;
+    max-width: 600px;
+    padding: 20px;
+}
+
+/* Form box */
+form {
+    background-color: #fff;
+    padding: 35px 40px;
+    border-radius: 20px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+    animation: fadeIn 1s ease-in-out;
+}
+
+/* Heading */
+h2 {
+    text-align: center;
+    margin-bottom: 30px;
+    color: #2c3e50;
+    font-size: 26px;
+    font-weight: bold;
+    animation: slideDown 0.8s ease-out;
+}
+
+/* Labels */
+label {
+    display: block;
+    margin-bottom: 6px;
+    color: #444;
+    font-weight: 500;
+}
+
+/* Inputs */
+input[type="text"] {
+    width: 100%;
+    padding: 10px 12px;
+    margin-bottom: 20px;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    font-size: 14px;
+    transition: all 0.3s ease;
+}
+
+input[type="text"]:focus {
+    border-color: #00aa8b;
+    outline: none;
+    box-shadow: 0 0 8px rgba(0, 170, 139, 0.4);
+}
+
+/* Submit Button */
+input[type="submit"] {
+    background: linear-gradient(to right, #007bff, #00aa8b);
+    color: white;
+    padding: 12px;
+    border: none;
+    border-radius: 10px;
+    width: 100%;
+    font-size: 16px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: 0.3s ease-in-out;
+}
+
+input[type="submit"]:hover {
+    transform: translateY(-2px) scale(1.03);
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2);
+}
+
+/* Result Message */
+h3 {
+    margin-top: 25px;
+    text-align: center;
+    font-size: 20px;
+    color: #222;
+    animation: fadeIn 1s ease-in-out;
+}
+
+/* Animations */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(15px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes slideDown {
+    from {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Responsive tweaks */
+@media screen and (max-width: 600px) {
+    form {
+        padding: 25px 20px;
+    }
+}
+
+
+
+/* Flex row for label + input */
+.form-row {
+    display: flex;
+    align-items: center;
+    margin-bottom: 15px;
+}
+
+/* Label on the left */
+.form-row label {
+    width: 35%;
+    min-width: 120px;
+    margin-right: 10px;
+    font-weight: 500;
+    color: #444;
+}
+
+/* Input on the right */
+.form-row input[type="text"] {
+    flex: 1;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    font-size: 14px;
+    transition: all 0.3s ease;
+}
+
+

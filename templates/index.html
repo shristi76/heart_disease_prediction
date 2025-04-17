@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Heart Disease Prediction</title>
+    <link rel="stylesheet" href="static/style.css">
+</head>
+<body>
+   
+        <div class="container">
+            <h2>Heart Disease Prediction Form</h2>
+            <form action="/predict" method="post">
+                {% for field in ['age', 'sex', 'cp', 'trestbps', 'chol', 'fbs', 'restecg',
+                                 'thalach', 'exang', 'oldpeak', 'slope', 'ca', 'thal'] %}
+                    <div class="form-row">
+                        <label>{{ field }}:</label>
+                        <input type="text" name="{{ field }}" required>
+                    </div>
+                {% endfor %}
+                <input type="submit" value="Predict">
+            </form>
+    
+            {% if prediction_text %}
+                <h3>{{ prediction_text }}</h3>
+            {% endif %}
+        </div>
+    
+    
+</body>
+</html>
