@@ -124,32 +124,3 @@ h3 {
     }
 }
 
-
-
-/* Flex row for label + input */
-.form-row {
-    display: flex;
-    align-items: center;
-    margin-bottom: 15px;
-}
-
-/* Label on the left */
-.form-row label {
-    width: 35%;
-    min-width: 120px;
-    margin-right: 10px;
-    font-weight: 500;
-    color: #444;
-}
-
-/* Input on the right */
-.form-row input[type="text"] {
-    flex: 1;
-    padding: 10px;
-    border: 1px solid #ccc;
-    border-radius: 8px;
-    font-size: 14px;
-    transition: all 0.3s ease;
-}
-
-

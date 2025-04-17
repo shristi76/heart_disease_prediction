@@ -11,11 +11,9 @@
             <h2>Heart Disease Prediction Form</h2>
             <form action="/predict" method="post">
                 {% for field in ['age', 'sex', 'cp', 'trestbps', 'chol', 'fbs', 'restecg',
-                                 'thalach', 'exang', 'oldpeak', 'slope', 'ca', 'thal'] %}
-                    <div class="form-row">
-                        <label>{{ field }}:</label>
-                        <input type="text" name="{{ field }}" required>
-                    </div>
+                                'thalach', 'exang', 'oldpeak', 'slope', 'ca', 'thal'] %}
+                    <label>{{ field }}:</label>
+                    <input type="text" name="{{ field }}" required>
                 {% endfor %}
                 <input type="submit" value="Predict">
             </form>
